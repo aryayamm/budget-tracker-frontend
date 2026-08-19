@@ -18,7 +18,6 @@ export async function GET() {
       }),
       prisma.transaction.groupBy({
         by: ['category', 'type'],
-        where: { date: { gte: new Date(now.getFullYear(), now.getMonth() - 5, 1) } },
         _sum: { amount: true },
         orderBy: { _sum: { amount: 'desc' } },
       }),
@@ -28,7 +27,6 @@ export async function GET() {
           type,
           SUM(amount)::float as total
         FROM "Transaction"
-        WHERE date >= NOW() - INTERVAL '6 months'
         GROUP BY TO_CHAR(date, 'YYYY-MM'), type
         ORDER BY month ASC
       `,

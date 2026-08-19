@@ -65,7 +65,7 @@ export default function AnalyticsPage() {
     <div>
       <div style={{ marginBottom: '2rem' }}>
         <h1 style={{ fontSize: '2rem', fontWeight: 600, marginBottom: '4px' }}>Analytics</h1>
-        <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>Last 6 months</p>
+        <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>All time</p>
       </div>
 
       <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1.5rem' }}>
